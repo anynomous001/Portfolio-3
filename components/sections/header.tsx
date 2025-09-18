@@ -14,15 +14,15 @@ export default function Header({ sectionsRef }: HeaderProps) {
           <div className="space-y-3 sm:space-y-2">
             <div className="text-sm text-muted-foreground font-mono tracking-wider">PORTFOLIO / 2025</div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight">
-              Felix
+              Pritam
               <br />
-              <span className="text-muted-foreground">Macaspac</span>
+              <span className="text-muted-foreground">Chakroborty</span>
             </h1>
           </div>
 
           <div className="space-y-6 max-w-md">
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              Frontend Developer crafting digital experiences at the intersection of
+              Full Stack Generative AI Developer crafting digital experiences at the intersection of
               <span className="text-foreground"> design</span>,<span className="text-foreground"> technology</span>,
               and
               <span className="text-foreground"> user experience</span>.
@@ -33,7 +33,7 @@ export default function Header({ sectionsRef }: HeaderProps) {
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 Available for work
               </div>
-              <div>Philippines</div>
+              <div>Kolkata,India</div>
             </div>
           </div>
         </div>
@@ -42,16 +42,16 @@ export default function Header({ sectionsRef }: HeaderProps) {
           <div className="space-y-4">
             <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
             <div className="space-y-2">
-              <div className="text-foreground">Frontend Developer</div>
-              <div className="text-muted-foreground">@ Hububble</div>
-              <div className="text-xs text-muted-foreground">2021 — Present</div>
+              <div className="text-foreground">Software Developer</div>
+              <div className="text-muted-foreground">@Prep-Piper</div>
+              <div className="text-xs text-muted-foreground">2025 — Present</div>
             </div>
           </div>
 
           <div className="space-y-4">
             <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
             <div className="flex flex-wrap gap-2">
-              {["HubL", "React", "TypeScript", "HubSpot CMS", "Node.js"].map((skill) => (
+              {["Next.js", "React", "TypeScript", "LangChain","LangGraph", "Node.js"].map((skill) => (
                 <span
                   key={skill}
                   className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"

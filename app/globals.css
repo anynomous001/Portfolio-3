@@ -136,3 +136,56 @@
     }
   }
 }
+
+
+
+
+/* Project Section Enhancements */
+/* #work {
+  position: relative;
+} */
+
+/* #work::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(30, 58, 138, 0.4) 0%, 
+    rgba(59, 130, 246, 0.6) 50%,
+    rgba(147, 197, 253, 0.4) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+} */
+
+/* Project card hover effects */
+.project-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Gradient text animation */
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
+  background-size: 400% 400%;
+  animation: gradient-x 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

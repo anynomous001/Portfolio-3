@@ -1,39 +1,43 @@
-import JobCard from '@/components/shared/job-card'
-import { Job } from '../types'
+import ProjectCard from '@/components/shared/project-card'
+import { Project } from '../types'
 
 interface WorkProps {
   sectionsRef: React.MutableRefObject<(HTMLElement | null)[]>;
 }
 
 export default function Work({ sectionsRef }: WorkProps) {
-  const jobs: Job[] = [
+  const projects: Project[] = [
+    {
+      year: "2025",
+      title: "PictureWhisperAI",
+      description: "This project appears to be an AI-powered image analysis application called \"PictureWhisper\" built with Next.js. It allows users to upload images and receive detailed AI-generated descriptions of their content. The application implements rate limiting for API calls and uses OpenAI's API for image analysis.",
+      tech: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS", "Image Processing"],
+      liveUrl: "https://image-whisper-ai.vercel.app/",
+      githubUrl: "https://github.com/anynomous001/ImageWhisperAI",
+    },
+    {
+      year: "Early 2025",
+      title: "Readium",
+      description: "A comprehensive reading platform designed to enhance your reading experience with modern features and intuitive design.",
+      tech: ["React", "Node.js", "MongoDB", "Express"],
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      year: "Mid 2024",
+      title: "PlayTM",
+      description: "A light replica of how PayTM works, like adding money to your wallet, sending money to a friend, adding beneficiaries, requesting a friend for money. Not only that you can also check your balance and history of your wallet.",
+      tech: ["React", "Node.js", "PostgreSQL", "Prisma", "NextAuth"],
+      liveUrl: "https://playtm.vercel.app/",
+      githubUrl: "https://github.com/anynomous001/Turborepo_Paytm",
+    },
     {
       year: "2023",
-      role: "Senior Frontend Engineer",
-      company: "Vercel",
-      description: "Leading frontend architecture for developer tools and AI-powered features.",
-      tech: ["React", "TypeScript", "Next.js"],
-    },
-    {
-      year: "2022",
-      role: "Frontend Engineer",
-      company: "Linear",
-      description: "Built performant interfaces for project management and team collaboration.",
-      tech: ["React", "GraphQL", "Framer Motion"],
-    },
-    {
-      year: "2021",
-      role: "Full Stack Developer",
-      company: "Stripe",
-      description: "Developed payment infrastructure and merchant-facing dashboard features.",
-      tech: ["Ruby", "React", "PostgreSQL"],
-    },
-    {
-      year: "2019",
-      role: "Software Engineer",
-      company: "Airbnb",
-      description: "Created booking flow optimizations and host management tools.",
-      tech: ["React", "Node.js", "MySQL"],
+      title: "Quizzicle",
+      description: "A quiz platform where you can create your own quiz and test your knowledge on a variety of topics.",
+      tech: ["React", "JavaScript", "CSS", "Local Storage"],
+      liveUrl: "https://spectacular-kataifi-8d603e.netlify.app/",
+      githubUrl: "https://github.com/anynomous001/Quiz",
     },
   ];
 
@@ -41,18 +45,26 @@ export default function Work({ sectionsRef }: WorkProps) {
     <section
       id="work"
       ref={(el) => (sectionsRef.current[1] = el)}
-      className="min-h-screen py-20 sm:py-32 opacity-0"
+      className="relative min-h-screen py-20 sm:py-32"
     >
-      <div className="space-y-12 sm:space-y-16">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-          <h2 className="text-3xl sm:text-4xl font-light">Selected Work</h2>
-          <div className="text-sm text-muted-foreground font-mono">2019 — 2025</div>
-        </div>
+      <div className="relative z-10 max-w-6xl mx-auto ">
+        <div className="space-y-12 sm:space-y-16">
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <h2 className="text-4xl sm:text-5xl font-light text-white">
+              Selected Projects
+            </h2>
+            <div className="text-sm text-white/60 font-mono tracking-wider">
+              2023 — 2025
+            </div>
+          </div>
 
-        <div className="space-y-8 sm:space-y-12">
-          {jobs.map((job, index) => (
-            <JobCard key={index} job={job} index={index} />
-          ))}
+          {/* Projects */}
+          <div className="space-y-8 sm:space-y-12">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} index={index} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
